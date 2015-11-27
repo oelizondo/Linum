@@ -4,17 +4,128 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    max-height: 100vh;
 }
 
-.title {
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    letter-spacing: 3px;
-    span { font-family: 'Dancing Script', cursive; }
+.content {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+
+    max-height: 100vh;
+
+    .assets-container {
+        padding-top: 125px;  
+        text-align: center;
+
+        h1 { margin-bottom: 100px; letter-spacing: 8px; }
+
+        .rotation {
+            min-height: 15vh;
+            padding-right: 30px;
+            -webkit-box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+
+            .background {
+                position: absolute;
+                z-index: -1;
+                height: 140px;
+                width: 140px;
+            }
+
+            .rotate {
+                position: relative;
+                width: 80px;
+                height: 80px;
+                margin: 18px 0 0 29px;
+                &:hover { @include rotate; transition: 1s; }
+            }
+        }
+
+        .appstore {
+            margin-top: 50px;
+            height: 50px;
+            width: auto;
+        }
+    }
+    p { display: none; }
+    .iphone {
+        position: fixed;
+        bottom: 0;
+        left: 37%;
+        width: 400px;
+        height: auto;
+    }
 }
+
+@media ( max-width: 800px ) {
+
+    .content { 
+        .appstore {
+            margin-bottom: 50px;
+        }
+        p { display: initial; margin-top: 50px;} 
+    }
+
+    .content {
+        .assets-container { padding-top: 60px; }
+    }
+    .iphone { display: none; }
+}
+// .center { margin: 0 auto; }
+
+// .content {
+//     max-height: 75vh;
+//     text-align: center;
+
+
+//     .container { margin-top: 170px; }
+
+//     .spinning-logo { margin-top: 50px; }
+
+//     .linum { 
+//         font-size: 44px; 
+//         letter-spacing: 8px;
+//     }
+
+//     .background {
+//         width: 120px;
+//         height: 120px;
+//         position: fixed;
+//         z-index: -1;
+//     }
+
+//     .logo {
+//         width: 60px;
+//         height: 60px;
+//         margin: 20px 30px 30px 30px;
+//         &:hover {
+//             @include rotate;
+//             transition: 1s;
+//         }
+//     }
+
+//     .appstore {
+//         margin-top: 10px;
+//         width: 130px;
+//         height: auto;
+//     }
+    
+//     .footer {
+//         height: 20vh;
+//         margin-top: 105px;
+//         .iphone {
+//             position: relative;
+//             bottom: 0;
+//             width: 500px;
+//             height: auto;
+//         }
+//     }
+// }
+
+// @media (max-width: 800px) {
+//     .footer {
+//         .iphone { width: 200px; height: auto; }
+//     }
+    
+// }

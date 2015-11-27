@@ -1,0 +1,7 @@
+@mixin rotate {
+  -webkit-transform: rotate(720deg); 
+  -moz-transform: rotate(720deg); 
+  -ms-transform: rotate(720deg); 
+  -o-transform: rotate(720deg); 
+  transform: rotate(720deg); 
+}

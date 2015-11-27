@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100vh; }
+
+.content {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  max-height: 100vh; }
+  .content .assets-container {
+    padding-top: 125px;
+    text-align: center; }
+    .content .assets-container h1 {
+      margin-bottom: 100px;
+      letter-spacing: 8px; }
+    .content .assets-container .rotation {
+      min-height: 15vh;
+      padding-right: 30px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      .content .assets-container .rotation .background {
+        position: absolute;
+        z-index: -1;
+        height: 140px;
+        width: 140px; }
+      .content .assets-container .rotation .rotate {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 18px 0 0 29px; }
+        .content .assets-container .rotation .rotate:hover {
+          -webkit-transform: rotate(720deg);
+          -moz-transform: rotate(720deg);
+          -ms-transform: rotate(720deg);
+          -o-transform: rotate(720deg);
+          transform: rotate(720deg);
+          transition: 1s; }
+    .content .assets-container .appstore {
+      margin-top: 50px;
+      height: 50px;
+      width: auto; }
+  .content p {
+    display: none; }
+  .content .iphone {
+    position: fixed;
+    bottom: 0;
+    left: 37%;
+    width: 400px;
+    height: auto; }
+
+@media (max-width: 800px) {
+  .content .appstore {
+    margin-bottom: 50px; }
+  .content p {
+    display: initial;
+    margin-top: 50px; }
+  .content .assets-container {
+    padding-top: 60px; }
+  .iphone {
+    display: none; } }
